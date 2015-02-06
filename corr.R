@@ -6,8 +6,7 @@ corr <- function(directory, threshold = 0, id = 1:332) {
     comcases <- sum(complete.cases(current))
     if(comcases > threshold) {
       cases <- current[complete.cases(current),]
-      casecorr <- cor(cases['nitrate'], cases['sulfate'])
-      corr <- c(corr, casecorr)
+      corr <- c(corr, cor(cases['nitrate'], cases['sulfate']))
     }
   }
   corr
