@@ -23,5 +23,6 @@ best <- function(state, outcome) {
   minimum <- min(hospitals[,cause])
   
   hospitals <- hospitals[hospitals[,cause] == minimum,'Hospital.Name']
-  sort(hospitals)[1]
+  hospitals <- sort(hospitals)[1]
+  hospitals[1]
 }
